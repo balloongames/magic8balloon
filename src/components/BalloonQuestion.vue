@@ -7,13 +7,13 @@ const isAnimating = ref<boolean>(false)
 
 const startAnimation = (): void => {
   if (isAnimating.value) return // Prevent re-clicking while animating
+  store.getNewResponse()
 
   isAnimating.value = true
 
   setTimeout(() => {
     isAnimating.value = false
     store.setState('response')
-    store.getNewResponse()
   }, 1800)
 }
 </script>
