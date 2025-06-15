@@ -47,8 +47,9 @@ imageMap.set('Yes definitely', yesDefinitely)
 imageMap.set('You may rely on it', youMayRelyOnIt)
 </script>
 <template>
-    <div class="max-w-[80vw] max-h-[80vh] flex items-center justify-center">
-        <img :src="imageMap.get($props.response)" class="max-w-full max-h-full border-4 border-white object-contain"
+    <div class="max-w-[80vw] max-h-[60vh] flex items-center justify-center">
+        <img :src="imageMap.get($props.response)"
+            class="max-w-full max-h-full border-4 border-white rounded-md object-contain"
             alt="Image of Balloon for $props.response" />
     </div>
 </template>
